@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flora – Gifting love to your dear ones. Flowers, plants, and floral services for every occasion.">
+  <title>Flora – Homepage</title>
+  <link rel="stylesheet" href="flowerstyle.css">
+</head>
+<body>
+
+  <!-- Green accent bar -->
+  <div class="greentop-bar"></div>
+
+  <!-- Top Navigation -->
+  <header class="top-bar">
+    <a href="index.html">
+      <img class="logo" src="logo_transparent.png" alt="Flora Logo">
+    </a>
+    <nav>
+      <ul class="tabs">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="flowerevents.html">Events</a></li>
+        <li><a href="flowershop.html">Shop</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="flowergallery.html">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <ul>
+      <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+      <li><a href="flowerevents.html" onclick="closeMenu()">Events</a></li>
+      <li><a href="flowershop.html" onclick="closeMenu()">Shop</a></li>
+      <li><a href="#services" onclick="closeMenu()">Services</a></li>
+      <li><a href="flowergallery.html" onclick="closeMenu()">Gallery</a></li>
+      <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Body -->
+  <div class="page-content">
+
+    <!-- Hero Video -->
+    <section class="hero">
+      <video autoplay loop muted playsinline>
+        <source src="videg.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay">
+        <div class="centered">GIFTING LOVE TO YOUR DEAR ONES</div>
+      </div>
+    </section>
+
+    <!-- What We Offer -->
+    <section id="services">
+      <div class="section-heading offer-top">
+        <p class="o1">What We Offer</p>
+        <p class="o2">Listed below four reasons to choose us!</p>
+        <hr class="smol-hr">
+      </div>
+
+      <div class="card-holder">
+        <div class="card">
+          <img src="icon_01.png" alt="Valentine's Day flowers">
+          <p class="card-head">Valentine's Day</p>
+          <p>Gift your loved one awesome red roses decorated in a beautiful bouquet!</p>
+        </div>
+        <div class="card">
+          <img src="icon_02.png" alt="Gift Plants">
+          <p class="card-head">Gift Plants</p>
+          <p>Gift plant pots to your family members and make them happy!</p>
+        </div>
+        <div class="card">
+          <img src="icon_03.png" alt="Gift Flowers">
+          <p class="card-head">Gift Flowers</p>
+          <p>Cannot think of what to gift on an occasion? Simple! Gift a bouquet of a variety of flowers.</p>
+        </div>
+        <div class="card">
+          <img src="icon_04.png" alt="Co-Flower Supplies">
+          <p class="card-head">Co-Flower Supplies</p>
+          <p>All kinds of products required to keep your flora healthy are available in our shop.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section>
+      <div class="section-heading">
+        <p class="o1">Our Plans and Pricings</p>
+        <p class="o2">Listed below our awesome plans</p>
+        <hr class="smol-hr">
+      </div>
+
+      <div class="card-holder" style="padding-top: 30px;">
+        <div class="cardd">
+          <p class="plan-name">Birthdays</p>
+          <p class="money">₹ 699</p>
+          <p>per serving</p>
+          <p class="cardd-body">
+            <b>Garden</b> Service<br>
+            <b>Event</b> Planning<br>
+            <b>Garden</b> Party<br>
+            <b>Preparing</b> Landscape<br>
+            <b>Garden</b> Fence
+          </p>
+          <button class="cardd-btn" onclick="confirmOffer()">Get This Offer</button>
+        </div>
+        <div class="cardd">
+          <p class="plan-name">Valentine</p>
+          <p class="money">₹ 799</p>
+          <p>per serving</p>
+          <p class="cardd-body">
+            <b>Garden</b> Service<br>
+            <b>Event</b> Planning<br>
+            <b>Garden</b> Party<br>
+            <b>Preparing</b> Landscape<br>
+            <b>Garden</b> Fence
+          </p>
+          <button class="cardd-btn" onclick="confirmOffer()">Get This Offer</button>
+        </div>
+        <div class="cardd">
+          <p class="plan-name">Funeral</p>
+          <p class="money">₹ 999</p>
+          <p>per serving</p>
+          <p class="cardd-body">
+            <b>Garden</b> Service<br>
+            <b>Event</b> Planning<br>
+            <b>Garden</b> Occasion<br>
+            <b>Preparing</b> Landscape<br>
+            <b>Garden</b> Fence
+          </p>
+          <button class="cardd-btn" onclick="confirmOffer()">Get This Offer</button>
+        </div>
+        <div class="cardd">
+          <p class="plan-name">Wedding</p>
+          <p class="money">₹ 1999</p>
+          <p>per serving</p>
+          <p class="cardd-body">
+            <b>Garden</b> Service<br>
+            <b>Event</b> Planning<br>
+            <b>Garden</b> Party<br>
+            <b>Preparing</b> Landscape<br>
+            <b>Garden</b> Fence
+          </p>
+          <button class="cardd-btn" onclick="confirmOffer()">Get This Offer</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer id="contact">
+      <div class="end">
+        <div class="end-block">
+          <p class="contact">Contact Details</p>
+          <p>
+            🔗 www.floraxxxx.com<br>
+            ✉️ info@floraxxxx.com<br>
+            📞 +XX XXX XX XX XX<br>
+            📞 +XX XXX XX XX XX<br>
+            🏠 Flora Housing Ground Floor, XYZ Road, ABC City – XXXXXX.
+          </p>
+          <p class="large-txt">QUERY<br>FORM<br>→</p>
+        </div>
+        <div class="end-block">
+          <div class="frm">
+            <p>Name:</p>
+            <input type="text" placeholder="Enter your name" required>
+            <p>Email:</p>
+            <input type="email" placeholder="Enter your email" required>
+            <p>Phone:</p>
+            <input type="tel" placeholder="Enter your phone number" required>
+            <p>Query Topic:</p>
+            <input type="text" placeholder="Enter the topic of your query" required>
+            <p>Comments/Questions:</p>
+            <textarea rows="6" placeholder="Type here"></textarea>
+            <button class="frm-btn" onclick="submitForm()">Submit</button>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© Flora Pvt. Ltd. Copyright 2024</p>
+      </div>
+    </footer>
+
+  </div><!-- end .page-content -->
+
+  <script src="flora.js"></script>
+</body>
+</html>

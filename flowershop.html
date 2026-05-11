@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flora – Shop our flowers and plants.">
+  <title>Flora – Shop</title>
+  <link rel="stylesheet" href="flowerstyle.css">
+</head>
+<body>
+
+  <div class="greentop-bar"></div>
+
+  <header class="top-bar">
+    <a href="index.html">
+      <img class="logo" src="logo_transparent.png" alt="Flora Logo">
+    </a>
+    <nav>
+      <ul class="tabs">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="flowerevents.html">Events</a></li>
+        <li><a href="flowershop.html">Shop</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="flowergallery.html">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <ul>
+      <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+      <li><a href="flowerevents.html" onclick="closeMenu()">Events</a></li>
+      <li><a href="flowershop.html" onclick="closeMenu()">Shop</a></li>
+      <li><a href="index.html#services" onclick="closeMenu()">Services</a></li>
+      <li><a href="flowergallery.html" onclick="closeMenu()">Gallery</a></li>
+      <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-content">
+
+    <section class="placeholder-section">
+      <h2>🌿 Shop Coming Soon</h2>
+      <p>Our online shop is being prepared with love. In the meantime, feel free to contact us directly to place an order or enquire about our products.</p>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer id="contact">
+      <div class="end">
+        <div class="end-block">
+          <p class="contact">Contact Details</p>
+          <p>
+            🔗 www.floraxxxx.com<br>
+            ✉️ info@floraxxxx.com<br>
+            📞 +XX XXX XX XX XX<br>
+            📞 +XX XXX XX XX XX<br>
+            🏠 Flora Housing Ground Floor, XYZ Road, ABC City – XXXXXX.
+          </p>
+          <p class="large-txt">QUERY<br>FORM<br>→</p>
+        </div>
+        <div class="end-block">
+          <div class="frm">
+            <p>Name:</p>
+            <input type="text" placeholder="Enter your name" required>
+            <p>Email:</p>
+            <input type="email" placeholder="Enter your email" required>
+            <p>Phone:</p>
+            <input type="tel" placeholder="Enter your phone number" required>
+            <p>Query Topic:</p>
+            <input type="text" placeholder="Enter the topic of your query" required>
+            <p>Comments/Questions:</p>
+            <textarea rows="6" placeholder="Type here"></textarea>
+            <button class="frm-btn" onclick="submitForm()">Submit</button>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© Flora Pvt. Ltd. Copyright 2024</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="flora.js"></script>
+</body>
+</html>

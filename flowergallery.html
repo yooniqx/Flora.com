@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flora – Flower gallery showcasing our beautiful arrangements.">
+  <title>Flora – Gallery</title>
+  <link rel="stylesheet" href="flowerstyle.css">
+</head>
+<body>
+
+  <div class="greentop-bar"></div>
+
+  <header class="top-bar">
+    <a href="index.html">
+      <img class="logo" src="logo_transparent.png" alt="Flora Logo">
+    </a>
+    <nav>
+      <ul class="tabs">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="flowerevents.html">Events</a></li>
+        <li><a href="flowershop.html">Shop</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="flowergallery.html">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <ul>
+      <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+      <li><a href="flowerevents.html" onclick="closeMenu()">Events</a></li>
+      <li><a href="flowershop.html" onclick="closeMenu()">Shop</a></li>
+      <li><a href="index.html#services" onclick="closeMenu()">Services</a></li>
+      <li><a href="flowergallery.html" onclick="closeMenu()">Gallery</a></li>
+      <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-content">
+
+    <!-- Cover Image -->
+    <section class="cover-hero">
+      <img src="cover2.jpg" alt="Gallery cover">
+      <div class="cover-overlay">
+        <div class="centered1">FLOWER GALLERY!~ ✿</div>
+      </div>
+    </section>
+
+    <!-- Gallery Intro -->
+    <section>
+      <div class="section-heading" style="padding-top: 40px;">
+        <p class="o1">Flowers</p>
+        <p class="o2">
+          We help companies create the perfect environment for both customers and employees.<br>
+          Traditional or contemporary — we cater to your specific requirements.<br>
+          For more information please contact us.
+        </p>
+        <hr class="smol-hr">
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+        <img src="f2.jpeg" alt="Flower arrangement 1">
+        <img src="icon_01.png" alt="Valentine flowers">
+        <img src="f1.jpg" alt="Flower arrangement 2">
+        <img src="icon_02.png" alt="Gift plants">
+        <img src="icon_03.png" alt="Gift flowers">
+        <img src="f3.jpeg" alt="Flower arrangement 3">
+        <img src="f5.jpg" alt="Flower arrangement 4">
+        <img src="f4.jpeg" alt="Flower arrangement 5">
+      </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer id="contact">
+      <div class="end">
+        <div class="end-block">
+          <p class="contact">Contact Details</p>
+          <p>
+            🔗 www.floraxxxx.com<br>
+            ✉️ info@floraxxxx.com<br>
+            📞 +XX XXX XX XX XX<br>
+            📞 +XX XXX XX XX XX<br>
+            🏠 Flora Housing Ground Floor, XYZ Road, ABC City – XXXXXX.
+          </p>
+          <p class="large-txt">QUERY<br>FORM<br>→</p>
+        </div>
+        <div class="end-block">
+          <div class="frm">
+            <p>Name:</p>
+            <input type="text" placeholder="Enter your name" required>
+            <p>Email:</p>
+            <input type="email" placeholder="Enter your email" required>
+            <p>Phone:</p>
+            <input type="tel" placeholder="Enter your phone number" required>
+            <p>Query Topic:</p>
+            <input type="text" placeholder="Enter the topic of your query" required>
+            <p>Comments/Questions:</p>
+            <textarea rows="6" placeholder="Type here"></textarea>
+            <button class="frm-btn" onclick="submitForm()">Submit</button>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© Flora Pvt. Ltd. Copyright 2024</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="flora.js"></script>
+</body>
+</html>

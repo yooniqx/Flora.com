@@ -1,0 +1,684 @@
+/* =============================================
+   FLORA — Global Stylesheet
+   ============================================= */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: rgb(2, 161, 2);
+  --dark-green: darkgreen;
+  --dark-bg: rgb(29, 27, 27);
+  --card-hover: rgb(236, 236, 236);
+  --text-dark: rgb(52, 61, 51);
+  --text-muted: rgb(65, 64, 64);
+  --nav-height: 110px;
+  --green-bar-height: 10px;
+  --total-header: 120px; /* green bar + nav */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* =============================================
+   HEADER / NAV
+   ============================================= */
+
+.greentop-bar {
+  height: var(--green-bar-height);
+  width: 100%;
+  background-color: var(--green);
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+}
+
+.top-bar {
+  height: var(--nav-height);
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: var(--green-bar-height);
+  z-index: 1500;
+  border-bottom: 2px solid var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo {
+  height: 90px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.tabs {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs li a {
+  display: block;
+  text-decoration: none;
+  color: var(--green);
+  font-size: clamp(14px, 1.5vw, 20px);
+  font-weight: bold;
+  padding: 8px 10px;
+  transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.tabs li a:hover {
+  background-color: var(--green);
+  color: white;
+}
+
+/* ---- Hamburger ---- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: 1600;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--green);
+  border-radius: 2px;
+  transition: transform 0.35s, opacity 0.35s;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+/* Mobile nav drawer */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: var(--total-header);
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1400;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 10px 0 20px;
+}
+
+.mobile-nav.open {
+  display: block;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav ul li a {
+  display: block;
+  padding: 14px 28px;
+  color: var(--green);
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.mobile-nav ul li a:hover {
+  background-color: var(--green);
+  color: white;
+}
+
+/* =============================================
+   PAGE BODY OFFSET (accounts for fixed header)
+   ============================================= */
+
+.page-content {
+  padding-top: var(--total-header);
+}
+
+/* =============================================
+   HOMEPAGE — HERO VIDEO
+   ============================================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background: #1a2e1a;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.centered {
+  text-align: center;
+  font-size: clamp(22px, 4vw, 40px);
+  padding: 20px 30px;
+  color: whitesmoke;
+  background-color: rgba(94, 131, 87, 0.7);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  max-width: 90%;
+}
+
+/* =============================================
+   SECTION HEADINGS
+   ============================================= */
+
+.section-heading {
+  text-align: center;
+  padding: 50px 20px 0;
+}
+
+.section-heading.offer-top {
+  padding-top: 40px;
+}
+
+.o1 {
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: bold;
+}
+
+.o2 {
+  font-style: italic;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-top: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: clamp(13px, 1.5vw, 16px);
+  padding: 0 10px;
+}
+
+.smol-hr {
+  margin: 10px auto 0;
+  border: none;
+  border-top: 3px solid var(--green);
+  width: 100px;
+}
+
+/* =============================================
+   CARDS — WHAT WE OFFER
+   ============================================= */
+
+.card-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 20px;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: clamp(200px, 22%, 300px);
+  min-width: 200px;
+  padding: 20px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: var(--card-hover);
+}
+
+.card img {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-head {
+  font-weight: bold;
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 12px 0 8px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* =============================================
+   PRICING CARDS
+   ============================================= */
+
+.cardd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: clamp(200px, 22%, 300px);
+  min-width: 200px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.cardd:hover {
+  background-color: var(--card-hover);
+}
+
+.plan-name {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  width: 100%;
+  font-size: clamp(18px, 2vw, 25px);
+}
+
+.money {
+  font-size: clamp(28px, 3.5vw, 40px);
+  padding: 12px 0 0;
+  font-weight: bold;
+}
+
+.cardd > p {
+  color: var(--text-muted);
+  font-size: 13px;
+  padding-bottom: 8px;
+}
+
+.cardd-body {
+  color: rgb(75, 75, 75);
+  font-size: clamp(14px, 1.5vw, 18px);
+  line-height: 2;
+  padding: 8px 0;
+  flex: 1;
+}
+
+.cardd-btn {
+  background-color: green;
+  color: white;
+  font-size: clamp(15px, 1.6vw, 20px);
+  padding: 8px 14px;
+  font-weight: 600;
+  box-shadow: 1px 1px rgb(49, 47, 47);
+  border: none;
+  margin: 14px 0 16px;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.cardd-btn:hover {
+  box-shadow: none;
+  background-color: var(--dark-green);
+}
+
+/* =============================================
+   CONTACT / FOOTER
+   ============================================= */
+
+.end {
+  background-color: var(--dark-bg);
+  color: white;
+  padding: 50px 40px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.end-block {
+  flex: 1 1 300px;
+  min-width: 260px;
+}
+
+.contact {
+  font-weight: 600;
+  font-size: clamp(22px, 2.5vw, 30px);
+  border-bottom: 2px solid var(--green);
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+}
+
+.end-block p {
+  line-height: 2;
+  font-size: 15px;
+}
+
+.large-txt {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 600;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* ---- Query Form ---- */
+.frm {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.frm p {
+  font-size: 14px;
+  margin-top: 8px;
+  line-height: 1.2;
+}
+
+.frm input,
+.frm textarea {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #555;
+  background: #1e1e1e;
+  color: white;
+  border-radius: 2px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.frm input:focus,
+.frm textarea:focus {
+  outline: none;
+  border-color: var(--green);
+}
+
+.frm textarea {
+  min-height: 120px;
+}
+
+.frm-btn {
+  background-color: rgb(13, 175, 40);
+  font-size: clamp(16px, 1.8vw, 22px);
+  color: white;
+  padding: 8px;
+  width: 110px;
+  align-self: flex-end;
+  border: none;
+  margin-top: 10px;
+  box-shadow: 2px 2px rgb(49, 48, 48);
+  cursor: pointer;
+  transition: background-color 0.4s, box-shadow 0.4s, transform 0.4s;
+}
+
+.frm-btn:hover {
+  background-color: rgb(26, 97, 12);
+  box-shadow: none;
+  transform: scale(0.95);
+}
+
+/* =============================================
+   COPYRIGHT BAR
+   ============================================= */
+
+.copyright {
+  background-color: var(--dark-bg);
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+}
+
+/* =============================================
+   EVENTS / GALLERY — COVER IMAGE
+   ============================================= */
+
+.cover-hero {
+  position: relative;
+  width: 100%;
+  height: clamp(200px, 35vw, 350px);
+  overflow: hidden;
+  background: #1a2e1a;
+}
+
+.cover-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cover-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered1 {
+  text-align: center;
+  font-size: clamp(22px, 3.5vw, 35px);
+  padding: 16px 28px;
+  color: whitesmoke;
+  background-color: rgba(94, 131, 87, 0.7);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  max-width: 80%;
+}
+
+/* =============================================
+   EVENTS PAGE
+   ============================================= */
+
+.event-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.event {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 600;
+  color: var(--text-dark);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 2.2;
+}
+
+.event-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px 20px 40px;
+}
+
+.event-card {
+  background: #f7fff7;
+  border: 2px solid var(--green);
+  border-radius: 8px;
+  padding: 28px 36px;
+  text-align: center;
+  min-width: 220px;
+  max-width: 300px;
+}
+
+.event-card h3 {
+  color: var(--green);
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.event-card p {
+  font-size: 15px;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* =============================================
+   GALLERY PAGE
+   ============================================= */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  padding: 30px 24px 40px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+  transition: transform 0.35s ease-in-out, box-shadow 0.35s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+/* =============================================
+   SHOP / PLACEHOLDER PAGE
+   ============================================= */
+
+.placeholder-section {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-dark);
+}
+
+.placeholder-section h2 {
+  font-size: clamp(24px, 4vw, 36px);
+  color: var(--green);
+  margin-bottom: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.placeholder-section p {
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+/* =============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================= */
+
+@media (max-width: 900px) {
+  .tabs {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .top-bar {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --nav-height: 80px;
+    --total-header: 90px;
+  }
+
+  .logo {
+    height: 65px;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .end {
+    padding: 36px 20px 24px;
+    flex-direction: column;
+  }
+
+  .cardd, .card {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .gallery-grid img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 400px) {
+  .centered {
+    font-size: 18px;
+    padding: 14px 16px;
+  }
+  .o1 {
+    font-size: 20px;
+  }
+}
