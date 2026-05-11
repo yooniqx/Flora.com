@@ -2,7 +2,7 @@
 
 A beautiful, responsive flower shop UI template built with pure HTML, CSS, and vanilla JavaScript. Perfect for showcasing floral services, events, and product galleries.
 
-**Live Demo:** Coming Soon
+**Live Demo:** [https://flora-com.pages.dev/](https://flora-com.pages.dev/)
 
 ![Flora Preview](cover.jpg)
 
@@ -16,7 +16,7 @@ Flora is a modern, lightweight flower shop website template designed for florist
 - 🎨 Clean, professional botanical design with green theme
 - 📱 Fully responsive across all devices
 - ⚡ Lightweight - no frameworks or dependencies
-- 🚀 Ready for instant Cloudflare Pages deployment
+- 🚀 Deployed on Cloudflare Pages
 - 🎭 Interactive modals and smooth animations
 - ♿ Accessible with semantic HTML and ARIA labels
 
@@ -66,7 +66,7 @@ flora-website/
 ├── flowerevents.html       # Events page
 ├── flowergallery.html      # Gallery page
 ├── flowershop.html         # Shop page (coming soon placeholder)
-├── flowerstyle.css         # Main stylesheet (684 lines)
+├── flowerstyle.css         # Main stylesheet (784 lines)
 ├── flora.js                # JavaScript functionality (modal, menu, forms)
 ├── _headers                # Cloudflare Pages headers configuration
 ├── _redirects              # Cloudflare Pages redirects configuration
@@ -75,15 +75,13 @@ flora-website/
 ├── README.md               # This file
 ├── DEPLOYMENT.md           # Detailed deployment guide
 ├── assets/                 # Static assets directory
-│   └── .gitkeep
-├── logo_transparent.png    # Site logo (90x90px)
+├── logo_transparent.png    # Site logo
 ├── cover.jpg               # Homepage hero image
 ├── cover1.jpg              # Events page cover
 ├── cover2.jpg              # Gallery page cover
 ├── videg.mp4               # Homepage hero video
 ├── f1.jpg - f5.jpg         # Gallery images
-├── icon_01.png - icon_04.png  # Service icons (130x130px)
-└── desktop.ini             # Windows system file (ignored)
+└── icon_01.png - icon_04.png  # Service icons
 ```
 
 ### Key Files Explained
@@ -105,8 +103,8 @@ flora-website/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/flora-website.git
-   cd flora-website
+   git clone https://github.com/yooniqx/Flora.com.git
+   cd Flora.com
    ```
 
 2. **Open in browser**
@@ -157,46 +155,25 @@ git push -u origin main
 1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/)
 2. Navigate to **Pages** → **Create a project**
 3. Click **Connect to Git**
-4. Select your repository: `flora-website`
+4. Select your repository
 
 **Step 3: Configure Build Settings**
 
-Fill in the following fields:
-
-| Field | Value | Explanation |
-|-------|-------|-------------|
-| **Production branch** | `main` | The branch to deploy from |
-| **Framework preset** | `None` | This is a static HTML site |
-| **Build command** | *(leave empty)* | No build process needed |
-| **Build output directory** | `/` | Root directory (static files) |
-| **Root directory** | `/` | Project root |
-| **Environment variables** | *(none needed)* | No env vars required |
+| Field | Value |
+|-------|-------|
+| **Production branch** | `main` |
+| **Framework preset** | `None` |
+| **Build command** | *(leave empty)* |
+| **Build output directory** | `/` |
+| **Root directory** | `/` |
+| **Environment variables** | *(none needed)* |
 
 **Step 4: Deploy**
 - Click **Save and Deploy**
 - Wait 1-2 minutes for deployment
-- Your site will be live at: `https://flora-website.pages.dev`
+- Your site will be live!
 
-### Method 2: Direct Upload
-
-1. Go to Cloudflare Pages → **Create a project**
-2. Click **Direct Upload**
-3. Drag and drop your project folder
-4. Click **Deploy site**
-
-### Post-Deployment
-
-✅ **Verify deployment:**
-- Check all pages load correctly
-- Test navigation and mobile menu
-- Verify modals work
-- Check browser console for errors
-
-✅ **Optional: Add custom domain**
-- Go to project settings → **Custom domains**
-- Add your domain (e.g., `flora.com`)
-- Update DNS records as instructed
-- SSL certificate auto-provisions
+For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ---
 
@@ -272,12 +249,6 @@ Update footer contact details in all HTML files:
 - Tablet: 768px - 1199px
 - Mobile: < 768px
 
-### Lighthouse Scores (Target)
-- Performance: 90+
-- Accessibility: 90+
-- Best Practices: 90+
-- SEO: 90+
-
 ---
 
 ## 📄 License
@@ -296,37 +267,11 @@ Contributions are welcome! Feel free to:
 
 ---
 
-## 👨‍💻 Author
-
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Portfolio: [yourportfolio.com](https://yourportfolio.com)
-- Email: your.email@example.com
-
----
-
-## 🙏 Acknowledgments
-
-- Design inspired by modern floral shop aesthetics
-- Built for Cloudflare Pages deployment
-- Icons and images are placeholders - replace with your own
-
----
-
-## 📞 Support
-
-For questions or support:
-- 📧 Email: your.email@example.com
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/flora-website/issues)
-- 📖 Documentation: [DEPLOYMENT.md](DEPLOYMENT.md)
-
----
-
 ## 🔗 Links
 
-- **Live Demo:** Coming Soon
-- **Repository:** [GitHub](https://github.com/yourusername/flora-website)
-- **Documentation:** [Deployment Guide](DEPLOYMENT.md)
+- **Live Demo:** [https://flora-com.pages.dev/](https://flora-com.pages.dev/)
+- **Repository:** [https://github.com/yooniqx/Flora.com](https://github.com/yooniqx/Flora.com)
+- **Documentation:** [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ---
 
