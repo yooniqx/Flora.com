@@ -4,6 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Flora – Gifting love to your dear ones. Flowers, plants, and floral services for every occasion.">
+  <meta name="keywords" content="flowers, plants, bouquets, floral arrangements, gifts, events, wedding flowers, valentine flowers">
+  <meta name="author" content="Flora">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flora.com/">
+  <meta property="og:title" content="Flora – Gifting Love to Your Dear Ones">
+  <meta property="og:description" content="Beautiful flowers, plants, and floral services for every occasion. Valentine's Day, weddings, birthdays, and more.">
+  <meta property="og:image" content="https://flora.com/cover.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://flora.com/">
+  <meta property="twitter:title" content="Flora – Gifting Love to Your Dear Ones">
+  <meta property="twitter:description" content="Beautiful flowers, plants, and floral services for every occasion.">
+  <meta property="twitter:image" content="https://flora.com/cover.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo_transparent.png">
+  
   <title>Flora – Homepage</title>
   <link rel="stylesheet" href="flowerstyle.css">
 </head>
@@ -186,11 +206,27 @@
         </div>
       </div>
       <div class="copyright">
-        <p>© Flora Pvt. Ltd. Copyright 2024</p>
+        <p>© Flora Pvt. Ltd. Copyright 2026</p>
       </div>
     </footer>
 
   </div><!-- end .page-content -->
+
+  <!-- Coming Soon Modal -->
+  <div id="comingSoonModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle" class="modal-title">Coming Soon</h2>
+        <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p id="modalMessage">This feature is coming soon!</p>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn" onclick="closeModal()">Got it!</button>
+      </div>
+    </div>
+  </div>
 
   <script src="flora.js"></script>
 </body>

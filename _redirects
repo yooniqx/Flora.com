@@ -1,0 +1,12 @@
+# Cloudflare Pages Redirects Configuration
+# https://developers.cloudflare.com/pages/platform/redirects/
+
+# Redirect common variations to canonical URLs
+/home /index.html 301
+/home.html /index.html 301
+
+# Handle 404 errors - redirect to home
+/* /index.html 404
+
+# Optional: Force HTTPS (Cloudflare handles this automatically, but can be explicit)
+# http://flora.com/* https://flora.com/:splat 301
